@@ -25,6 +25,7 @@ def permuterms(s):
     for _ in xrange(len(amended)):
       rotation = amended[-1] + amended[:-1]
       terms.append(rotation)
+      amended = rotation
   return terms
 
 # Converts a number into gamma encoding
