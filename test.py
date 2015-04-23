@@ -10,6 +10,10 @@ bigrams_words = cs276.ngrams("humpty dumpty", 2)
 for bigram in ['$h', 'hu', 'um', 'mp', 'pt', 'ty', 'y$', '$d', 'du', 'um', 'mp', 'pt', 'ty', 'y$']:
   assert bigram in bigrams_words
 
+# Permuterm test
+permuterms = cs276.permuterms("hello world")
+assert len(permuterms) == 12
+
 # Gamma encoding test
 assert cs276.encodeGamma(1) == "0"
 assert cs276.encodeGamma(4) == "11000"

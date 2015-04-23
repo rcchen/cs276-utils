@@ -2,10 +2,12 @@
 
 To use the cs276 library, simply place it in the same directory as your scripts and call `import cs276`
 
-`ngrams(s,n)` - retrieves a list of all n-grams for a string. Beginnings and ends of words are indicated with a $, and strings are split into words with a space as the delimiter.
+`ngrams(s,n)` - returns a list of all n-grams for a string. Beginnings and ends of words are indicated with a $, and strings are split into words with a space as the delimiter.
 
-`encodeGamma(n)` - determines the Gamma encoding for a number.
+`permuterms(s)` - returns a list of all permuterms for a string. String is split into words with a space as the delimiter. Each word is augmented with a $.
 
-`decodeGamma(s)` - decodes a string encoded with Gamma encoding into a list of numbers.
+`encodeGamma(n)` - returns the Gamma encoding for a number.
 
-`encodeDelta(n)` - determines the Delta encoding for a number.
+`decodeGamma(s)` - returns a list of numbers decoded from a Gamma encoded string.
+
+`encodeDelta(n)` - returns the Delta encoding for a number.

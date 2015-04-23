@@ -15,6 +15,18 @@ def ngrams(s, n):
       grams.append(word[i:i+n])
   return grams
 
+# Generates a list of permuterms for a string
+# Terms are augmented with a $ and then rotated through all positions
+# Strings are split into words with spaces as a delimiter
+def permuterms(s):
+  terms = []
+  for word in s.split(" "):
+    amended = word + "$"
+    for _ in xrange(len(amended)):
+      rotation = amended[-1] + amended[:-1]
+      terms.append(rotation)
+  return terms
+
 # Converts a number into gamma encoding
 def encodeGamma(n):
   length = ["1" for _ in xrange(int(math.floor(math.log(n, 2))))]
